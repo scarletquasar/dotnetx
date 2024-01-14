@@ -2,6 +2,10 @@
     "name": "dotnetx",
     "version": "0.0.1",
     "devDependencies": {
-        "@types/node": "^20.11.0"
+        "@types/node": "^20.11.0",
+        "ts-node": "^10.9.2"
+    },
+    "scripts": {
+        "test": "ts-node ./src/entrypoint.ts"
     }
 }

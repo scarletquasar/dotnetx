@@ -98,7 +98,7 @@ module ConfigTypes {
     // Solution option types
 
     export interface ProjectReference {
-        path: `${string}.csproj`,
+        path: `${string}.json`,
         isStartupProject?: boolean,
         configuration?: 'Debug' | 'Release',
         platform?: 'ARM32' | 'ARM64' | 'x64' | 'x86'
