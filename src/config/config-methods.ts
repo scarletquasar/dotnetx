@@ -1,5 +1,5 @@
 import { readFile } from "fs/promises";
-import ConfigTypes from "./config-types";
+import ConfigTypes from "./config-types.js";
 
 type AnyOfLoader = ConfigTypes.SolutionOptions | ConfigTypes.ProjectOptions;
 

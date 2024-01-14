@@ -3,57 +3,74 @@ module ConfigTypes {
 
     export type Version = `${number}.${number}.${number}`;
     export type PackageVersion = `${'>' | '>>' | '*'}${Version}`;
+    
+    export type DotnetLanguage = 
+        | 'csharp'
+        | 'fsharp'
+        | 'vb.net'
+        | 'powershell'
+        | 'cpp-cli';
+
+    /**
+    * @deprecated @next
+    * This type contain languages pending on
+    * dotnetx implementation and should not be used.
+    */
+    export type DotnetNextLanguage =
+        | 'iron-python'
+        | 'iron-ruby'
+        | 'draco'
 
     export type TargetFrameworkBase = 
-    | 'netcoreapp1.0'
-    | 'netcoreapp1.1'
-    | 'netcoreapp2.0'
-    | 'netcoreapp2.1'
-    | 'netcoreapp2.2'
-    | 'netcoreapp3.0'
-    | 'netcoreapp3.1'
-    | 'net5.0*'
-    | 'net6.0*'
-    | 'net7.0*'
-    | 'net8.0*'
-    | 'netstandard1.0'
-    | 'netstandard1.1'
-    | 'netstandard1.2'
-    | 'netstandard1.3'
-    | 'netstandard1.4'
-    | 'netstandard1.5'
-    | 'netstandard1.6'
-    | 'netstandard2.0'
-    | 'netstandard2.1'
-    | 'net11'
-    | 'net20'
-    | 'net35'
-    | 'net40'
-    | 'net403'
-    | 'net45'
-    | 'net451'
-    | 'net452'
-    | 'net46'
-    | 'net461'
-    | 'net462'
-    | 'net47'
-    | 'net471'
-    | 'net472'
-    | 'net48'
-    | 'netcore'
-    | 'netcore45'
-    | 'netcore451'
-    | 'netmf'
-    | 'sl4'
-    | 'sl5'
-    | 'wp'
-    | 'wp7'
-    | 'wp75'
-    | 'wp8'
-    | 'wp81'
-    | 'wpa81'
-    | 'uap'
-    | 'uap10.0';
+        | 'netcoreapp1.0'
+        | 'netcoreapp1.1'
+        | 'netcoreapp2.0'
+        | 'netcoreapp2.1'
+        | 'netcoreapp2.2'
+        | 'netcoreapp3.0'
+        | 'netcoreapp3.1'
+        | 'net5.0*'
+        | 'net6.0*'
+        | 'net7.0*'
+        | 'net8.0*'
+        | 'netstandard1.0'
+        | 'netstandard1.1'
+        | 'netstandard1.2'
+        | 'netstandard1.3'
+        | 'netstandard1.4'
+        | 'netstandard1.5'
+        | 'netstandard1.6'
+        | 'netstandard2.0'
+        | 'netstandard2.1'
+        | 'net11'
+        | 'net20'
+        | 'net35'
+        | 'net40'
+        | 'net403'
+        | 'net45'
+        | 'net451'
+        | 'net452'
+        | 'net46'
+        | 'net461'
+        | 'net462'
+        | 'net47'
+        | 'net471'
+        | 'net472'
+        | 'net48'
+        | 'netcore'
+        | 'netcore45'
+        | 'netcore451'
+        | 'netmf'
+        | 'sl4'
+        | 'sl5'
+        | 'wp'
+        | 'wp7'
+        | 'wp75'
+        | 'wp8'
+        | 'wp81'
+        | 'wpa81'
+        | 'uap'
+        | 'uap10.0';
 
     export type TargetFramework = `${TargetFrameworkBase}${( 
         '-windows' |
@@ -86,6 +103,7 @@ module ConfigTypes {
     // Project option types
 
     export interface ProjectOptions {
+        language: DotnetLanguage,
         sdk: ProjectSdk,
         targetFramework: TargetFramework,
         version?: Version,
