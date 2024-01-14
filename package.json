@@ -1,0 +1,7 @@
+{
+    "name": "dotnetx",
+    "version": "0.0.1",
+    "devDependencies": {
+        "@types/node": "^20.11.0"
+    }
+}
