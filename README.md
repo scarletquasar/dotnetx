@@ -17,7 +17,7 @@
 Example:
 
 ```bash
-dotnetx nuget add-source my-source https://source.net
+dotnetx nuget add-source my-source https://source.net --local
 ```
 ```
 > dotnetx vx.x.x
