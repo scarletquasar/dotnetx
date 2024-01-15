@@ -116,7 +116,7 @@ module ConfigTypes {
     // Solution option types
 
     export interface ProjectReference {
-        path: `${string}.json`,
+        path: `${string}${'json' | 'proj'}`,
         isStartupProject?: boolean,
         configuration?: 'Debug' | 'Release',
         platform?: 'ARM32' | 'ARM64' | 'x64' | 'x86'
