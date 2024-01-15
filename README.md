@@ -8,7 +8,10 @@
 
 ## ❄️ Features
 
-**dotnetx** extends the functionalities of the default dotnet command and provides various others like project tree visualization and dynamic package management. The objective of that project is to provide a well documented, simple to use tool and api that is easily expandable and can be extended not only to the default languages inside .NET, but to any technology that can be aggregated into dotnet solutions.
+### Powerful command-line tool
 
+- **dotnetx** extends the functionalities of the default `dotnet` command and provides various others like project tree visualization and dynamic package management. 
+- The integration with **nuget** provide easy package management through projects and solutions, provide an easy visualization of nuget repository providers and also provide a hint system to help the developer to solve package-related problems.
+ 
 ### 
  
