@@ -10,7 +10,23 @@
 
 ### Command-line tool
 
-\- **dotnetx** extends the functionalities of the default `dotnet` command and provides various others like project tree visualization and dynamic package management. 
+\- **dotnetx** extends the functionalities of the default `dotnet` command and provides various others like project tree visualization and dynamic package management.
+
+Example:
+```bash
+dotnetx check-versions --list-runtimes
+```
+```
+> dotnetx vx.x.x
+
+> - Currently installed .NET versions
+>        
+> - SDK 2.1.818
+> - SDK 6.0.414                                
+> - Runtime Microsoft.AspNetCore.App 2.1.30   
+> - Runtime Microsoft.AspNetCore.App 6.0.21   
+```
+
 
 \- The integration with **nuget** provide easy package management through projects and solutions, provide an easy visualization of nuget repository providers and also provide a hint system to help the developer to solve package-related problems. 
 
