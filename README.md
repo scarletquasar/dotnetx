@@ -12,8 +12,6 @@
 
 **dotnetx** extends the functionalities of the default `dotnet` command and provides various others like project tree visualization and dynamic package management. 
 
-<br>
-
 The integration with **nuget** provide easy package management through projects and solutions, provide an easy visualization of nuget repository providers and also provide a hint system to help the developer to solve package-related problems. 
 
 Example:
