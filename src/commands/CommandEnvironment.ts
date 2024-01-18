@@ -14,13 +14,19 @@ class CommandEnvironment {
     start() {
         const version = chalk.cyan('v' + this.curretDotnetxVersion);
         const title = `dotnetx ${version}`;
+        const processArgs = process.argv.slice(2);
+        const storedCommands = {
+            'versions': (args: string[]) => versions(args),
+        };
 
         console.log(title);
         console.log('');
 
         checkForDotnet();
 
-        versions(['list-runtimes']);
+        const currentCommand = process.argv.slice(2)[0] as keyof typeof storedCommands;
+        
+        storedCommands[currentCommand](processArgs);
     }
 }
 

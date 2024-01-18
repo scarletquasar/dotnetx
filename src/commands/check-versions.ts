@@ -7,8 +7,8 @@ async function versions(flags: string[]) {
         sdks: [] as string[]
     };
     
-    const listPathes = flags.includes('list-pathes');
-    const listRuntimes = flags.includes('list-runtimes');
+    const listPathes = flags.includes('--list-pathes');
+    const listRuntimes = flags.includes('--list-runtimes');
 
     const initialMessage = `- ${chalk.bold.cyan('Currently installed .NET versions')}`;
     console.log(initialMessage);
@@ -25,7 +25,7 @@ async function versions(flags: string[]) {
         if (line) {
             const items = line.split(' ');
             const sdkVersion = chalk.magenta(items[0]);
-            const sdkPath = listPathes ? chalk.yellow(items[1]) : '';
+            const sdkPath = listPathes ? chalk.yellow([items[1], items[2]].join('')) : '';
             const final = `- SDK ${sdkVersion} ${sdkPath}`;
             result.sdks.push(final);
         }
@@ -45,7 +45,7 @@ async function versions(flags: string[]) {
                 const items = line.split(' ');
                 const runtimeName = chalk.greenBright.bold(items[0]);
                 const runtimeVersion = chalk.magenta(items[1]);
-                const runtimePath = listPathes ? chalk.yellow(items[2]) : '';
+                const runtimePath = listPathes ? chalk.yellow([items[2], items[3]].join('')) : '';
                 const final = `- Runtime ${runtimeName} ${runtimeVersion} ${runtimePath}`;
                 result.runtimes.push(final);
             }
