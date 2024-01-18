@@ -1,5 +1,5 @@
 import chalk from 'chalk';
-import { versions } from './check-versions.js';
+import { versions } from './versions.js';
 import { checkForDotnet } from '../command-line/check-for-dotnet.js';
 
 class CommandEnvironment {
